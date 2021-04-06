@@ -1,0 +1,116 @@
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit)
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - build
+
+# If you need help with rules run $ swiftlint 
+
+opt_in_rules:
+  - closure_end_indentation
+  - closure_spacing
+  - comments_space
+  - empty_count
+  - explicit_init
+  - explicit_failure_calls
+  - extension_access_modifier
+  - fatal_error_message
+  - first_where
+  - force_cast
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - multiline_parameters
+  - multiple_empty_lines
+  - nesting
+  - number_separator
+  - operator_usage_whitespace
+  - overridden_super_call
+  - private_outlet
+  - prohibited_super_call
+  - protocol_property_accessors_order
+  - redundant_nil_coalescing
+  - syntactic_sugar
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace
+
+disabled_rules: # rule identifiers to exclude from running
+  - missing_docs
+
+cyclomatic_complexity:
+  ignores_case_statements: true
+  warning: 20
+
+file_length:
+  warning: 300
+  error: 400
+
+line_length: 
+  warning: 160 
+  error: 180
+  ignores_comments: true
+  ignores_urls: true
+
+nesting:
+  type_level:
+    warning: 3
+    error: 6
+  statement_level:
+    warning: 5
+    error: 10
+
+identifier_name:
+  allowed_symbols: "_"
+  min_length: 2
+  max_length: 
+    warning: 30
+    error: 35
+  excluded:
+    - id
+    - url
+    - key
+
+implicitly_unwrapped_optional:
+  mode: all_except_iboutlets
+
+large_tuple:
+  warning: 4
+  error: 5
+
+type_body_length:
+  warning: 300
+  error: 350
+
+trailing_comma:
+  mandatory_comma: true
+
+number_separator:
+  minimum_length: 8
+
+private_outlet:
+  allow_private_set: true
+
+colon: 
+  severity: error
+comma: error
+empty_count: error
+legacy_constant: error
+legacy_constructor: error
+opening_brace: error
+trailing_newline: error
+trailing_semicolon: error
+
+custom_rules:
+  comments_space: # From https://github.com/brandenr/swiftlintconfig
+    name: "Space After Comment"
+    regex: '(^ *//\w+)'
+    message: "There should be a space after //"
+    severity: warning
+  explicit_failure_calls:
+      name: “Avoid asserting ‘false’”
+      regex: ‘((assert|precondition)\(false)’
+      message: “Use assertionFailure() or preconditionFailure() instead.”
+      severity: warning
+  multiple_empty_lines:
+     name: "Multiple Empty Lines"
+     regex: '((?:\s*\n){3,})'
+     message: "There are too many line breaks"
+     severity: error
