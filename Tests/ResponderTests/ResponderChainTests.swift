@@ -1,7 +1,7 @@
 import XCTest
 @testable import Responder
 
-final class ResponderTests: XCTestCase {
+final class ResponderChainTests: XCTestCase {
 
     func testCheckChain() {
 
@@ -24,7 +24,7 @@ final class ResponderTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testCheckChain),
+        ("testCheckChain", testCheckChain),
     ]
 }
 
