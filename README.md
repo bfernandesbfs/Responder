@@ -18,11 +18,11 @@ struct Object: Responder {
 
 ## Why do we want to do this?
 
-Basically, we want to send data through this list and we need anyone to anwser whether or not they can perform this action. And how can we do this? The idea beyond this implementation is to have a fusion of delegate pattern and Notification Center using Chain of Responsibility
+Basically, we want to send data through this list and we need someone to anwser whether or not they can perform this action. And how can we do this? The idea behind this implementation is to have a fusion of delegate pattern and Notification Center using Chain of Responsibility
 
 ![alt text](./Docs/Img/Img02.png)
 
-Following this example, we need to walk each object and wonder if we can execute or not execute an action if not then we wonder to next into the chain 
+Following this example, we need to go through each object and check if we can execute or not execute an action, if not then we check to next element in the chain 
 
 ```swift
 
@@ -40,7 +40,7 @@ enum Action: Event {
 
 ```
 
-In this case, the protocol `Action Protocol` is just only used as a protocol of validation who will be executed whether has found on chain. An `Event` is the protocol that we need to implement and who we'll send through the chain, easy easy right!
+In this case, the `ActionProtocol` is just used as a validation protocol that will be executed when found on the chain. An `Event` is the protocol that we need to implement and that we'll send through the chain, super easy right!
 
 ## How do we send an event?
 
