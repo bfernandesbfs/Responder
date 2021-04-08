@@ -73,7 +73,7 @@ To use `Responder` as a [Swift Package Manager](https://swift.org/package-manage
 
 ``` swift
 
-.package(url: "https://github.com/bfernandesbfs/Responder.git", .upToNextMajor(from: "1.0.0"))
+.package(url: "https://github.com/bfernandesbfs/Responder.git", .upToNextMajor(from: "0.0.1"))
 
 ```
 ## License
