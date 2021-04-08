@@ -1,10 +1,10 @@
 # Responder
 
-Responder is a Package that provides one way of sending your data through a chain of responsibility using the better implementation protocol based on delegate pattern and the better that notification center provides
+Responder is a Package that provides a way of sending your data through a chain of responsibility using a better protocol implementation based on delegate pattern and a better solution that the Notification Center provides
 
 ## How to use this package?
 
-It's very simple, at first, we just implement protocol `Responder` where we want to create a linked list based on value type or reference, look at the example below:
+It's very simple, at first, we just implement `Responder` protocol where we want to create a linked list based on value type or reference, take a look at the example below:
 
 ```swift
 
@@ -16,9 +16,9 @@ struct Object: Responder {
 
 ![alt text](./Docs/Img/Img01.png)
 
-## Why do we want to do it?
+## Why do we want to do this?
 
-Basically, we want to send data through this list and we need to anyone respond if can execute or not, and how can we do it? the idea beyond this implementation is to have a fusion of delegate pattern and notification center using chain responsibility
+Basically, we want to send data through this list and we need anyone to anwser whether or not they can perform this action. And how can we do this? The idea beyond this implementation is to have a fusion of delegate pattern and Notification Center using Chain of Responsibility
 
 ![alt text](./Docs/Img/Img02.png)
 
@@ -44,7 +44,7 @@ In this case, the protocol `Action Protocol` is just only used as a protocol of 
 
 ## How do we send an event?
 
-Don't worry, it's very much simples what you imagine!
+Don't worry, it's much simpler than you imagine!
 
 ```swift
 
@@ -55,17 +55,17 @@ object.tryToHandle(Action.here)
 Do you see? it's simple
 
 
-## Ideas to use
+## Ideas of usage
 
-### Coordinator parttern
+### Coordinator pattern
 
-We can use this to avoid delegate pattern where usually we create to property reference to set values to delegate for each node to three for coordinators
+We can use this to avoid using delegate pattern in which usually we create a property reference to set delegate's values to each coordinator node
 
-### Interceptor parttern
+### Interceptor pattern
 
-Here the use is basic, we can shift array by default and create a chain list and each element can respond specific action
+Here the use is basic, we can create a linked list and each element can respond a specific action
 
-## How to install this?
+## How to install it?
 
 ### Swift Package Manager
 
