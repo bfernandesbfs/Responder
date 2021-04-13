@@ -1,6 +1,7 @@
 # Responder
 
 [![Swift](https://github.com/bfernandesbfs/Responder/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bfernandesbfs/Responder/actions/workflows/ci.yml)
+[![Tag](https://img.shields.io/github/v/tag/bfernandesbfs/Responder?logo=github)](https://github.com/bfernandesbfs/Responder/releases)
 
 Responder is a Package that provides a way of sending your data through a chain of responsibility using a better protocol implementation based on delegate pattern and a better solution that the Notification Center provides
 
