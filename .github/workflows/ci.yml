@@ -14,8 +14,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Lint
-      run: swiftlint
+      run: |
+            set -o pipefail
+            swiftlint
+            
     - name: Build
-      run: swift build
+      run: |
+            set -o pipefail
+            swift build
+
     - name: Run tests
-      run: swift test
+      run: |
+            set -o pipefail
+            swift test
